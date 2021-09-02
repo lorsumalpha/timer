@@ -5,7 +5,19 @@ const stundenE = document.getElementById("hours");
 const minutenE = document.getElementById("minutes");
 const sekundenE = document.getElementById("seconds");
 
-const adventD = "28 Nov 2021";
+var adventD;
+
+// Zeitenwähler, um den Countdown zu ändern
+function timeselector(){
+    let input = prompt ("Welches Datum möchtest du als Countdown", "11 Nov 2021");
+    if (input == null || input == ""){
+        input = "11 Nov 2021";
+    }else{
+        
+    }
+    adventD = input;
+}
+
 
 // Erstellung der Funktion "Countdown" - Berechnung des Countdowns
 function countdown(){
@@ -29,7 +41,7 @@ function countdown(){
 
 }
 
-
+timeselector();
 countdown();
 // Jede Sekunde den Output geben
 setInterval(countdown, 1000);
